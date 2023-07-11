@@ -1,0 +1,7 @@
+{
+  "name": "BEPC-Vacante",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
