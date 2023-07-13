@@ -28,6 +28,7 @@
     "@capacitor/keyboard": "5.0.5",
     "@capacitor/status-bar": "5.0.5",
     "@ionic-native/core": "^5.36.0",
+    "@ionic-native/in-app-browser": "^5.36.0",
     "@ionic/angular": "^7.0.0",
     "firebase": "^9.16.0",
     "ionicons": "^7.0.0",

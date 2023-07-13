@@ -7,14 +7,21 @@ import { IonicModule } from '@ionic/angular';
 import { DashboardPageRoutingModule } from './dashboard-routing.module';
 
 import { DashboardPage } from './dashboard.page';
+import { UploadFormComponent } from '../components/upload-form/upload-form.component';
+import { UploadListComponent } from '../components/upload-list/upload-list.component';
+import { UploadDetailsComponent } from '../components/upload-details/upload-details.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    DashboardPageRoutingModule
+    DashboardPageRoutingModule,
+
   ],
-  declarations: [DashboardPage]
+  declarations: [DashboardPage,
+    UploadFormComponent,
+    UploadListComponent,
+    UploadDetailsComponent]
 })
 export class DashboardPageModule {}

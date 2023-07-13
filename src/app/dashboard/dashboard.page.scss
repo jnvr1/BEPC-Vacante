@@ -21,8 +21,23 @@ ion-toolbar{
 	--ion-background-color: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -ms-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -ms-linear-gradient(-45deg,  #ABDEE6 0%,#CBAACB 100%);
 	--ion-background-color: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), linear-gradient(to bottom,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), linear-gradient(135deg,  #ABDEE6 0%,#CBAACB 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#CBAACB',GradientType=1 );
+  ion-icon{
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    transform: translateY(-40%);
+    cursor: pointer;
+    z-index: 1;
+  }
 }
 
-ion-button{
-  --background: #CBAACB;
+
+
+.my-3{
+margin-top: 2%;
+margin-left: 2%;
+}
+.my-2{
+  margin-left: 20%;
+  margin-top: 5%;
 }
