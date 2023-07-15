@@ -20,4 +20,4 @@ usuario123
 administrador:
 admin@prueba.jnvr
 contraseña:
-admin123
+Admin123
