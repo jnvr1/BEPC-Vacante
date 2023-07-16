@@ -22,6 +22,7 @@ import { UploadDetailsComponent } from '../components/upload-details/upload-deta
   declarations: [DashboardPage,
     UploadFormComponent,
     UploadListComponent,
-    UploadDetailsComponent]
+    UploadDetailsComponent],
+    
 })
 export class DashboardPageModule {}

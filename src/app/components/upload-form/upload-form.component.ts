@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FileUploadService } from 'src/app/services/file-upload.service';
 import { FileUpload } from 'src/app/models/file-upload';
+import { AuthenticationService } from 'src/shared/authentication-service';
 
 @Component({
   selector: 'app-upload-form',
@@ -11,9 +12,15 @@ export class UploadFormComponent  implements OnInit {
   selectedFiles!: FileList;
   currentFileUpload!: FileUpload;
   percentage!: number;
-  constructor(private uploadService: FileUploadService) { }
+  user:any
+  constructor(private uploadService: FileUploadService, public authService: AuthenticationService) {
 
-  ngOnInit() {}
+   }
+
+  ngOnInit() :void{
+    this.user = this.authService.userData.uid
+    console.log(this.user)
+  }
   selectFile(event:any): void {
     this.selectedFiles = event.target.files;
   }

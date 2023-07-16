@@ -6,19 +6,24 @@ import { IonLoaderService } from '../services/ion-loader.service';
   selector: 'app-dashboard',
   templateUrl: './dashboard.page.html',
   styleUrls: ['./dashboard.page.scss'],
+
 })
 export class DashboardPage implements OnInit {
   fileName:any
   reader = new FileReader()
   message:any
   user:any
+
+
   constructor(
     public authService: AuthenticationService,
-    private ionLoaderService: IonLoaderService
+    private ionLoaderService: IonLoaderService,
+
   ) {
-    this.user = JSON.parse(localStorage.getItem('user') || '{}');
+
    }
-  ngOnInit() {
+  async ngOnInit() {
+    
   }
   loadImageFromDevice(event: { target: { files: any[]; }; }) {
 
@@ -53,5 +58,8 @@ export class DashboardPage implements OnInit {
       console.log('Uploaded a blob or file!');
     });
 
+  }
+  refresh(){
+    window.location.reload();
   }
 }

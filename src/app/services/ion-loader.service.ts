@@ -15,14 +15,14 @@ export class IonLoaderService {
     });
 }
 autoLoader() {
-  this.loadingController.create({
-    message: 'Loader hides after 4 seconds',
-    duration: 4000
+  return this.loadingController.create({
+    message: 'Loading...',
+    duration: 1000
   }).then((response) => {
     response.present();
     response.onDidDismiss().then((response) => {
       console.log('Loader dismissed', response);
     });
   });
-}   
+}
 }

@@ -6,9 +6,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { UploadFormComponent } from './components/upload-form/upload-form.component';
-import { UploadListComponent } from './components/upload-list/upload-list.component';
-import { UploadDetailsComponent } from './components/upload-details/upload-details.component';
+
 
 
 import { AngularFireModule } from '@angular/fire/compat';

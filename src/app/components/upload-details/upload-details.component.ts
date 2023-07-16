@@ -1,7 +1,7 @@
-import { User } from './../../../shared/user';
 import { Component, Input, OnInit } from '@angular/core';
 import { FileUploadService } from 'src/app/services/file-upload.service';
 import { FileUpload } from 'src/app/models/file-upload';
+import { AuthenticationService } from 'src/shared/authentication-service';
 
 
 @Component({
@@ -12,11 +12,13 @@ import { FileUpload } from 'src/app/models/file-upload';
 export class UploadDetailsComponent  implements OnInit {
   @Input() fileUpload= FileUpload;
   user:any
-  constructor(private uploadService: FileUploadService) {
-    this.user = JSON.parse(localStorage.getItem('user') || '{}');
+  constructor(private uploadService: FileUploadService,public authService: AuthenticationService) {
+
    }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.user = this.authService.userData.uid
+  }
 
   deleteFileUpload(fileUpload: any): void {
     this.uploadService.deleteFile(fileUpload);

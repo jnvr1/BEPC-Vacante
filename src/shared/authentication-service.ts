@@ -30,8 +30,8 @@ export class AuthenticationService {
     });
   }
   // Login in with email/password
-  SignIn(email: any, password: any) {
-    return this.ngFireAuth.signInWithEmailAndPassword(email, password);
+  async SignIn(email: any, password: any) {
+    return await this.ngFireAuth.signInWithEmailAndPassword(email, password);
   }
   // Register user with email/password
   RegisterUser(email: any, password: any) {
@@ -59,7 +59,7 @@ export class AuthenticationService {
       });
   }
   // Returns true when user is looged in
-  get isLoggedIn(): boolean {
+   get isLoggedIn(): boolean {
     const user = JSON.parse(localStorage.getItem('user') || '{}');
     return user !== null && user.emailVerified !== false ? true : false;
   }
@@ -87,7 +87,7 @@ export class AuthenticationService {
       });
   }
   // Store user in localStorage
-  SetUserData(user: any) {
+  async SetUserData(user: any) {
     const userRef: AngularFirestoreDocument<any> = this.afStore.doc(
       `users/${user.uid}`
     );
@@ -98,15 +98,15 @@ export class AuthenticationService {
       photoURL: user.photoURL,
 
     };
-    return userRef.set(userData, {
+    return await userRef.set(userData, {
       merge: true,
     });
   }
   // Sign-out
-  SignOut() {
+  async SignOut() {
     return this.ngFireAuth.signOut().then(() => {
-      localStorage.removeItem('user');
-      this.router.navigate(['login']);
+      const a = localStorage.removeItem('user');
+      this.router.navigate(['login'],{replaceUrl: true} );
     });
   }
 }
