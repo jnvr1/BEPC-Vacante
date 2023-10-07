@@ -37,7 +37,7 @@ ion-content{
 }
 .login {
 	position: absolute;
-	top: 50%;
+	top: 25%;
 	left: 50%;
 	margin: -150px 0 0 -150px;
 	width:300px;
@@ -67,3 +67,9 @@ ion-item{
 	transition: --ion-box-shadow-color .5s ease;
 }
 ion-button:focus { --background-hover: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+
+ion-img{
+  margin: 0 auto;
+  height: 50%;
+  width: 50%;
+}
